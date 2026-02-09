@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>Plant Identification</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="../static/css/images/favicon.ico" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+	<script src="../static/js/jquery-1.7.min.js" type="text/javascript"></script>
+	<script src="../static/js/jquery.jcarousel.js" type="text/javascript"></script>
+	<script src="../static/js/DD_belatedPNG-min.js" type="text/javascript"></script>
+	<script src="../static/js/functions.js" type="text/javascript"></script>	
+	
+<style type="text/css">
+.st1
+{
+width:250px;
+height:30px;
+}
+.st2
+{
+color:#FFFFFF;
+}
+.st3
+{
+color:#006600;
+}
+</style>
+</head>
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<div class="shell">
+			<!-- Header -->
+			<div id="header">
+				<!-- Logo -->
+				<h1 id="logo"><a href="#" title="home">Plant</a></h1>
+				<!--<div class="socials">				
+					<a title="in" class="in" href="#">in</a>
+					<a title="twitter" class="twitter" href="#">twitter</a>
+					<a title="flickr" class="flickr" href="#">flickr</a>
+					<a title="Facebook" class="facebook" href="#">Facebook</a>
+					<div class="cl"></div>							
+				</div>		-->	
+			</div>
+			<!-- END Header -->
+			<!-- Navigation -->
+			<div id="navigation">
+				<ul>
+					<li class="nav-start"><a title="Home" href="/test_img">Home</a></li>
+					
+					<li class="nav-end"><a title="Get In Touch" href="/logout">Logout</a></li>				
+				</ul>
+				<div class="cl"></div>
+			</div>
+			<!-- END Navigation -->
+			<!-- Main -->
+			<div id="main">
+				<div id="main-top"></div>
+				<div id="main-middle">
+					<!-- Slider -->
+					
+					<!-- END Slider -->
+					<!-- Content -->
+					
+					<h4 align="center">Testing Phase </h4>
+						
+					<div align="center">
+					   <h4>Predicted Result</h4>
+					   Class: {{ts}}
+					   <br>
+					   <img src="../static/dataset/{{fn}}" width="160" height="120">
+					  
+					  {% if st=="1" %}
+							
+                                <table width="90%" align="center" border="0" cellpadding="5" cellspacing="0">
+                                  <tr>
+								  	<td width="20%" style="background-color:#BFFFDF">#</td>
+                                    <td width="80%" style="background-color:#BFFFDF"><strong>Medicine Uses</strong></td>
+                                  </tr>
+                                   {% for rs in data3 %}
+                                  <tr>
+								  <td>{{loop.index}}</td>
+                                    <td align="left" valign="top"><span style="font-family:Arial, Helvetica, sans-serif; font-size:12px">{{rs[2]}}</span></td>
+                                  </tr>
+                                  {% endfor %}
+                                </table>
+								
+					  {% endif %}
+					  
+					  </div>
+					
+				</div>
+				<div id="main-bottom"></div>
+			</div>
+			<!-- END Main -->
+			<!-- Footer -->
+			<div id="footer">
+				<div id="footer-middle">
+					<span class="author"><a href="http://css-free-templates.com/">Plant Identification</a></span>
+					
+				</div>	
+				<div id="footer-bottom"></div>
+			</div>
+			<!-- END Footer -->
+		</div>
+	</div>
+	<!-- END Wrapper -->
+</body>
+</html>
